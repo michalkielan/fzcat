@@ -11,4 +11,6 @@ $ ./logcat-sort/main.py -h
 ```
 
 ## Output
+```
 [<log count>]: <log message>
+```
