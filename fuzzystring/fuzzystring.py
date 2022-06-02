@@ -2,9 +2,11 @@
 
 from fuzzyhash.fuzzyhash import FuzzyHash
 
+
 class FuzzyString:
     """ Fuzzy hashing string """
-    def __init__(self, fuzzy_hash : FuzzyHash, data : str):
+
+    def __init__(self, fuzzy_hash: FuzzyHash, data: str):
         self.data = data
         self.fuzzy_hash = fuzzy_hash
 

@@ -76,13 +76,23 @@ def print_log_counts_adb(fuzzy_hash, tags, levels, ignore_less_than):
         logs_count = defaultdict(int)
         while True:
             try:
-                line = adb_logcat.stdout.readline().decode('utf-8', 'replace').strip()
+                line = (
+                    adb_logcat
+                    .stdout
+                    .readline()
+                    .decode('utf-8', 'replace')
+                    .strip()
+                )
                 _, _, _, _, level, tag, message = parse_log_line(line)
                 if len(line) == 0:
                     break
                 if contain_tag(tag, tags) and level.lower() in levels:
-                    logs_count[FuzzyString(fuzzy_hash,
-                                           f'{level} {tag} {message.strip()}')] += 1
+                    logs_count[
+                        FuzzyString(
+                            fuzzy_hash,
+                            f'{level} {tag} {message.strip()}'
+                        )
+                    ] += 1
                     print('\033c', end='')
                     print_log_counts(logs_count, ignore_less_than)
             except KeyboardInterrupt:
