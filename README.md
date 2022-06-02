@@ -1,4 +1,6 @@
-## Tool to sort and filter logcat files
+# Logcat sort
+[![Travis CI](https://travis-ci.org/michalkielan/logcat-sort.svg?branch=master)](https://travis-ci.org/michalkielan/logcat-sort)
+> Tool to sort and filter logcat files
 
 Sort and print out the log from logcat file.
 ```
