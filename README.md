@@ -1,5 +1,5 @@
 # Logcat sort
-[![Travis CI](https://travis-ci.org/michalkielan/logcat-sort.svg?branch=master)](https://travis-ci.org/michalkielan/logcat-sort)
+[![Travis CI](https://app.travis-ci.com/michalkielan/logcat-sort.svg?branch=master)](https://app.travis-ci.com/michalkielan/logcat-sort)
 > Tool to sort and print logs from logcat file
 
 ## Usage
