@@ -1,6 +1,8 @@
 """ Log count """
 
+import os
 import subprocess
+import tqdm
 from subprocess import PIPE
 from collections import defaultdict
 from fuzzystring.fuzzystring import FuzzyString
@@ -16,14 +18,16 @@ def filter_logs_from_file(filename, tags, levels):
     :param: str: levels: levels to filter
     """
     logs = []
-    with open(filename, mode='r', encoding='utf-8') as logfile_fd:
-        for line in logfile_fd:
-            try:
-                _, _, _, _, level, tag, message = parse_log_line(line)
-            except ParseLogLineFailed:
-                continue
-            if contain_tag(tag, tags) and level.lower() in levels:
-                logs.append(f'{level} {tag} {message.strip()}')
+    with tqdm.tqdm(total=os.path.getsize(filename), desc='Open file ') as pbar:
+        with open(filename, mode='r', encoding='utf-8') as logfile_fd:
+            for line in logfile_fd:
+                pbar.update(len(line))
+                try:
+                    _, _, _, _, level, tag, message = parse_log_line(line)
+                except ParseLogLineFailed:
+                    continue
+                if contain_tag(tag, tags) and level.lower() in levels:
+                    logs.append(f'{level} {tag} {message.strip()}')
     return logs
 
 
@@ -36,8 +40,10 @@ def count_logs_occurrence(fuzzy_hash, logs):
     """
     count = defaultdict(int)
 
-    for log_line in logs:
-        count[FuzzyString(fuzzy_hash, log_line)] += 1
+    with tqdm.tqdm(total=len(logs), desc='Count logs') as pbar:
+        for log_line in logs:
+            pbar.update(1)
+            count[FuzzyString(fuzzy_hash, log_line)] += 1
     return count
 
 
