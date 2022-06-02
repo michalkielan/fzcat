@@ -25,7 +25,8 @@ $ ./main.py -l E W -t OMX libjingle
         '--log-levels',
         nargs='+',
         help='Filter output by specified log level(s)',
-        required=True)
+        default=['S', 'F', 'E', 'W', 'I', 'D', 'V'],
+        required=False)
     parser.add_argument(
         '-t',
         '--tags',
