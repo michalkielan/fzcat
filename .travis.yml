@@ -4,7 +4,11 @@ python:
   - "3.6"
 
 install:
-  - pip install pytest soundex
+  - pip install pytest soundex flake8
+
+before_script:
+  - flake8 --version
 
 script:
   - pytest tests
+  - flake8 **/*py
