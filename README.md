@@ -1,14 +1,14 @@
-## Tool to sort and filter logcat files
+# Logcat sort
+[![Travis CI](https://travis-ci.org/michalkielan/logcat-sort.svg?branch=master)](https://travis-ci.org/michalkielan/logcat-sort)
+> Tool to sort and print logs from logcat file
 
-Sort and print out the log from logcat file.
+## Usage
 ```
-[<log count>]: <log message>
-```
-
-Run
-```
-$ ./logcatparser/main.py -h
+$ ./logcat-sort/main.py -h
 -i <logcat file>
 -l <log levels - filter output by specified log level(s)>
 -t <tag> - filter output by specified tag(s)>
 ```
+
+## Output
+[<log count>]: <log message>
