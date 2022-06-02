@@ -29,8 +29,11 @@ def contain_tag(log_tag, tags):
 
     :param: str: log_tag: tag from logcat line
     :param: str[]: tags: ignore log if tag is not on the list
-    :return: bool: True if tag is on the tags list, False otherwise
+    :return: bool: True if tag is within the tags list or list is empty,
+        False otherwise
     """
+    if not tags:
+        return True
     for tag in tags:
         if tag.lower() in log_tag.lower():
             return True

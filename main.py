@@ -31,7 +31,8 @@ $ ./main.py -l E W -t OMX libjingle
         '--tags',
         nargs='+',
         help='Filter output by specified tags(s)',
-        required=True)
+        default=[],
+        required=False)
     args = parser.parse_args()
     tags = [tag.lower() for tag in args.tags]
     levels = [level.lower() for level in args.log_levels]
