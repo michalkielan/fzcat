@@ -1,6 +1,5 @@
 # Logcat sort
 ![Build](https://github.com/michalkielan/logcat-sort/actions/workflows/build.yml/badge.svg)
-[![Travis CI](https://app.travis-ci.com/michalkielan/logcat-sort.svg?branch=master)](https://app.travis-ci.com/michalkielan/logcat-sort)
 > Tool to sort and print logs from logcat file
 
 ## Usage
