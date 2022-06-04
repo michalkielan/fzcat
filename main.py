@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+
+#
+# file main.py
+#
+# SPDX-FileCopyrightText: (c) 2022 Michal Kielan
+#
+# SPDX-License-Identifier: GPL-3.0-only
+#
+
 """ Tool for parse logcat file """
 
 import argparse
