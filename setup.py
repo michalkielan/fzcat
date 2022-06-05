@@ -16,7 +16,7 @@ setup(
     author_email='michalkielan@protonmail.com',
     packages=["fzcat"],
     entry_points={
-        "console_scripts": ['bootstrap = bootstrap.bootstrap:main']
+        "console_scripts": ['fzcat = fzcat.fzcat:main']
     },
     python_requires='>3.6.0',
     test_suite='tests',
