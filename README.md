@@ -1,5 +1,5 @@
 # Logcat sort
-![Build](https://github.com/michalkielan/logcat-sort/actions/workflows/build.yml/badge.svg)
+[![Build](https://github.com/michalkielan/logcat-sort/actions/workflows/build.yml/badge.svg](https://github.com/michalkielan/logcat-sort/actions/workflows/build.yml)
 > Tool to sort and print logs from logcat file
 
 ## Usage
