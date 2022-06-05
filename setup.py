@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 #
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='fzcat',
@@ -14,7 +14,7 @@ setup(
     description='Tool to sort and print logs from logcat file.',
     author='Michal Kielan',
     author_email='michalkielan@protonmail.com',
-    packages=["fzcat"],
+    packages=find_packages(exclude=('tests', 'docs')),
     entry_points={
         "console_scripts": ['fzcat = fzcat.fzcat:main']
     },
