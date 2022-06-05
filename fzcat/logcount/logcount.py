@@ -10,12 +10,16 @@
 
 import os
 import subprocess
-import tqdm
 from subprocess import PIPE
 from collections import defaultdict
-from fuzzystring.fuzzystring import FuzzyString
-from fuzzyhash.fuzzyhash import FuzzyHash
-from logparser.logparser import parse_log_line, contain_tag, ParseLogLineFailed
+import tqdm
+from fzcat.fuzzystring.fuzzystring import FuzzyString
+from fzcat.fuzzyhash.fuzzyhash import FuzzyHash
+from fzcat.logparser.logparser import (
+    parse_log_line,
+    contain_tag,
+    ParseLogLineFailed
+)
 
 
 def filter_logs_from_file(filename, tags, levels):
