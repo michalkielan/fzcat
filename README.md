@@ -4,7 +4,7 @@
 
 ## Usage
 ```
-$ ./logcat-sort/main.py -h
+$ python -m fzcat -h
 -i <logcat file>
 -l <log levels - filter output by specified log level(s)>
 -t <tag> - filter output by specified tag(s)>
