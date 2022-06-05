@@ -9,7 +9,7 @@
 """ Soundex hash and compare implementation """
 
 from soundex import Soundex
-from fuzzyhash.fuzzyhash import FuzzyHash
+from fzcat.fuzzyhash.fuzzyhash import FuzzyHash
 
 
 class SoundexHash(FuzzyHash):

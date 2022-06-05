@@ -9,9 +9,9 @@
 """ Test for logcat count """
 
 import pytest
-from logcount.logcount import count_logs_occurrence
-from fuzzyhash.soundexhash import SoundexHash
-from fuzzystring.fuzzystring import FuzzyString
+from fzcat.logcount.logcount import count_logs_occurrence
+from fzcat.fuzzyhash.soundexhash import SoundexHash
+from fzcat.fuzzystring.fuzzystring import FuzzyString
 
 FUZZY_HASH = SoundexHash()
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #
-# file main.py
+# file fzcat.py
 #
 # SPDX-FileCopyrightText: (c) 2022 Michal Kielan
 #
@@ -11,9 +11,8 @@
 """ Tool for parse logcat file """
 
 import argparse
-import sys
-from logcount.logcount import count_logs
-from fuzzyhash.soundexhash import SoundexHash
+from fzcat.logcount.logcount import count_logs
+from fzcat.fuzzyhash.soundexhash import SoundexHash
 
 
 def main():
@@ -48,7 +47,3 @@ $ ./main.py -l E W -t OMX libjingle
     levels = [level.lower() for level in args.log_levels]
 
     return count_logs(args.input_file, tags, levels, 4, SoundexHash())
-
-
-if __name__ == '__main__':
-    sys.exit(main())

@@ -8,7 +8,7 @@
 
 """ Fuzzy hashing object """
 
-from fuzzyhash.fuzzyhash import FuzzyHash
+from fzcat.fuzzyhash.fuzzyhash import FuzzyHash
 
 
 class FuzzyString:
