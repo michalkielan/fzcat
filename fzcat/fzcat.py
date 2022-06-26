@@ -14,8 +14,9 @@ from fzcat.fuzzyhash.soundexhash import SoundexHash
 
 
 def main():
-    """ main """
-    parser = argparse.ArgumentParser(usage="""
+    """main"""
+    parser = argparse.ArgumentParser(
+        usage="""
 Tool for parsing logcat files
 
 Get logs from logcat file:
@@ -24,22 +25,25 @@ $ ./main.py -i logcat.log -l E W -t OMX libjingle
 Get logs from adb device:
 $ ./main.py -l E W -t OMX libjingle
 
-""")
-    parser.add_argument('-i', '--input-file', type=str)
+"""
+    )
+    parser.add_argument("-i", "--input-file", type=str)
     parser.add_argument(
-        '-l',
-        '--log-levels',
-        nargs='+',
-        help='Filter output by specified log level(s)',
-        default=['S', 'F', 'E', 'W', 'I', 'D', 'V'],
-        required=False)
+        "-l",
+        "--log-levels",
+        nargs="+",
+        help="Filter output by specified log level(s)",
+        default=["S", "F", "E", "W", "I", "D", "V"],
+        required=False,
+    )
     parser.add_argument(
-        '-t',
-        '--tags',
-        nargs='+',
-        help='Filter output by specified tags(s)',
+        "-t",
+        "--tags",
+        nargs="+",
+        help="Filter output by specified tags(s)",
         default=[],
-        required=False)
+        required=False,
+    )
     args = parser.parse_args()
     tags = [tag.lower() for tag in args.tags]
     levels = [level.lower() for level in args.log_levels]
