@@ -9,15 +9,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='fzcat',
-    version='0.1.0',
-    description='Tool to sort and print logs from logcat file.',
-    author='Michal Kielan',
-    author_email='michalkielan@protonmail.com',
-    packages=find_packages(exclude=('tests', 'docs')),
-    entry_points={
-        "console_scripts": ['fzcat = fzcat.fzcat:main']
-    },
-    python_requires='>3.6.0',
-    test_suite='tests',
+    name="fzcat",
+    version="0.1.0",
+    description="Tool to sort and print logs from logcat file.",
+    author="Michal Kielan",
+    author_email="michalkielan@protonmail.com",
+    packages=find_packages(exclude=("tests", "docs")),
+    entry_points={"console_scripts": ["fzcat = fzcat.fzcat:main"]},
+    python_requires=">3.6.0",
+    test_suite="tests",
 )

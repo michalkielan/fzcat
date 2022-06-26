@@ -13,13 +13,13 @@ from fzcat.fuzzyhash.fuzzyhash import FuzzyHash
 
 
 class SoundexHash(FuzzyHash):
-    """ Soundex hashing class using soundex algorithm """
+    """Soundex hashing class using soundex algorithm"""
 
     def __init__(self):
         self.__soundex = Soundex()
 
     def compare(self, lhs, rhs):
-        """ Compare soundex of given strings
+        """Compare soundex of given strings
 
         :param: str: lhs: first string for comparison
         :param: str: rhs: second string for comparison
@@ -30,7 +30,7 @@ class SoundexHash(FuzzyHash):
         return False
 
     def hash(self, data):
-        """ Create a hash from soundex of given string
+        """Create a hash from soundex of given string
 
         :param: str: string whose hash to be calculated
         :return: int: hash of `data`
